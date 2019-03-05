@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char **argv)
+{
+    int data[5]={5,2,6,4,1};
+    int i, j, k, tampung;
+    cout<<"Data yang belum terurut =";
+    for(k = 0; k < 5; k++)
+    {
+        cout<<data[k]<<" ";
+    }
+    for(i = 1; i < 5; i++)
+    {
+        for(j = 0; j < 4; j++)
+        {
+            if(data[j] > data[j+1])
+            {
+            tampung = data[j];
+            data[j] = data[j+1];
+            data[j+1] = tampung;
+            }
+        }
+    }
+    cout<<"\n";
+    cout<<"Data yang terurut =";
+    for(k = 0; k < 5; k++)
+    {        
+	cout<<data[k]<<" ";
+    }
+    cout<<"\n";
+	return 0;
+}
